@@ -1,0 +1,96 @@
+/*google font imports*/
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code&display=swap');
+
+/*main font*/
+.google-sans-code {
+  font-family: "Google Sans Code", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*bold version of font above*/
+.sans-code-bold {
+  font-family: "Google Sans Code", monospace;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/*header font*/
+.poiret-one-regular {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*background*/
+body {
+  margin: 0;
+  border: 0;
+  background-color: #ffffff;
+}
+
+/*header div for all pages*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    border: 1px solid #EDEDED;
+}
+
+/*style of my name*/
+header h2 {
+    color: #4F89F7;
+    padding-left: 2vw;
+    font-size: 3vw;
+}
+
+/*nav bar as a whole*/
+nav {
+    display: flex;
+    align-items: center;
+    padding-right: 2vw;
+    gap: 3px;
+    width: auto;
+}
+
+/*each individual link in the nav bar*/
+header a {
+    display: flex;
+    align-items: center;
+    color: #4F89F7;
+    text-decoration: none;
+    position: relative; /*the icons move with one another, allowing for the shift effect*/
+}
+
+/*icon gets darker when hovered over*/
+header a:hover {
+    color: #072b6e;
+}
+
+/*word label that goes with each icon is not visible at first*/
+.nav-label {
+    opacity: 0; /*transparent so we can't see it*/
+    left: 100%;
+    width: 0; /*takes up 0 space because it is hidden*/
+    overflow: hidden; /*hides text that doesn't fit in the width of 0*/
+    transition: opacity .3s;
+    transition: width .3s;
+    text-align: center;
+}
+
+/*when the icon is hovered over, the text label that goes with it shows*/
+header a:hover .nav-label {
+    opacity: 1; /*opaque so we can see it*/
+    width: auto; /*when the icon is hovered over, makes the width of the label the width of the word*/
+}
+
+/*tile of each page*/
+h1 {
+    color: #000000;
+    text-align: center;
+    font-size: 5vw;
+}

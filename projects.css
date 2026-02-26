@@ -1,0 +1,39 @@
+/*all projects*/
+.portfolio {
+    margin: 5vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*displays projects in a grid with 2 columns*/
+    gap: 40px;
+    color: #000000;
+}
+
+/*subheadder, type of project*/
+h2 {
+    text-align: center;
+}
+
+/*project title*/
+h3 {
+    text-align: center;
+    color: #4F89F7;
+}
+
+/*date*/
+h4 {
+    text-align: center;
+}
+
+/*each individual project*/
+.project {
+    border-radius: 10px;
+    border: .5px solid #EDEDED;
+    box-shadow: 5px 5px 10px 0px #ededed;
+    padding: 2%;
+}
+
+/*when screen is small, display is one column*/
+@media screen and (max-width: 1000px){
+  .portfolio {
+    grid-template-columns: 1fr;
+  }
+}

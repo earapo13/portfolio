@@ -1,0 +1,61 @@
+/*styling for all items*/
+.resume {
+    margin: 5vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*displays expereinces in a grid with 2 columns*/
+    gap: 40px;
+    color: #000000;
+}
+
+/*type of experience*/
+h2 {
+    text-align: center;
+}
+
+/*expereince title*/
+h3 {
+    text-align: center;
+    color: #4F89F7;
+}
+
+/*company name + dates*/
+h4 {
+    text-align: left;
+}
+
+/*logo + comapny name + dates*/
+.company {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/*logos*/
+img {
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+}
+
+.website-link {
+    color: #000000;
+}
+
+.website-link:hover {
+    color: rgb(117, 117, 117); /*links are grey when hovered over*/
+}
+
+/*each indivdual experience*/
+.job {
+    border-radius: 10px;
+    border: .5px solid #EDEDED;
+    box-shadow: 5px 5px 10px 0px #ededed;
+    padding: 2%;
+}
+
+/*when screen is small, display jobs as one single column*/
+@media screen and (max-width: 1000px){
+  .resume {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,49 @@
+/*format for the entire square with all of the contact info in it*/
+.contact-info-container {
+    text-align: center;
+    margin: 5vw; /*space between this area and the body*/
+    gap: 40px; /*space between elements*/
+    color: #000000;
+    border-radius: 10px; /*curves the edges*/
+    border: .5px solid #EDEDED; /*adds the border*/
+    box-shadow: 5px 5px 10px 0px #ededed; /*adds the shadow*/
+    padding-top: 3%;
+}
+
+/*format within the container. everything minus the info title*/
+.contact-info {
+    gap: 40px; /*space between elements*/
+    display: flex; /*displays contact info side by side instead of on top of each other*/
+    justify-content: center;
+    padding: 5%;
+}
+
+
+/*type of contact title*/
+h3 {
+    text-align: center;
+    color: #4F89F7;
+}
+
+/*makes sure images are the same size as the google icons*/
+img {
+    max-height: 24px;
+    max-width: 24px;
+}
+
+/*changes color of links from blue to black*/
+a {
+    color: #000000;
+}
+
+/*links are light grey when hovered over*/
+a:hover {
+    color: rgb(117, 117, 117);
+}
+
+/*when the screen is too narrow to display contact in a row, it changes to a column*/
+@media screen and (max-width: 1000px){
+  .contact-info {
+    flex-direction: column;
+  }
+}
