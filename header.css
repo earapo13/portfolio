@@ -73,19 +73,26 @@ header a:hover {
 
 /*word label that goes with each icon is not visible at first*/
 .nav-label {
-    opacity: 0; /*transparent so we can't see it*/
-    left: 100%;
-    width: 0; /*takes up 0 space because it is hidden*/
-    overflow: hidden; /*hides text that doesn't fit in the width of 0*/
-    transition: opacity .3s;
-    transition: width .3s;
-    text-align: center;
+    display: inline-block;
+    max-width: 0;          /* Hidden initially */
+    overflow: hidden;
+    white-space: nowrap;
+
+    opacity: 0;
+    transform: translateX(-8px);
+    margin-left: 6px;      /* Space between icon and text */
+
+    transition:
+        max-width 0.3s ease,
+        opacity 0.3s ease,
+        transform 0.3s ease;
 }
 
 /*when the icon is hovered over, the text label that goes with it shows*/
 header a:hover .nav-label {
-    opacity: 1; /*opaque so we can see it*/
-    width: auto; /*when the icon is hovered over, makes the width of the label the width of the word*/
+    max-width: 100px;      /* Larger than your longest label */
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /*tile of each page*/
