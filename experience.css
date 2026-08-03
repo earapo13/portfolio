@@ -149,7 +149,22 @@
 
 /* Mobile layout */
 /*when screen is small, display jobs as one single column*/
-@media screen and (max-width: 1000px){ 
+/* Medium screens: 3 columns */
+@media screen and (max-width: 1200px){ 
+    .resume {
+        grid-template-columns: repeat(3, 1fr);
+    } 
+}
+
+/* Small screens: 2 column */
+@media screen and (max-width: 900px){ 
+    .resume {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+}
+
+/* Tiny screens: 1 column */
+@media screen and (max-width: 650px){ 
     .resume {
         grid-template-columns: 1fr;
     } 
