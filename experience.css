@@ -157,13 +157,23 @@
 }
 
 .experience-section-title {
-    text-align: center;
+    text-align: left;
     color: #000000;
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    width: fit-content;
+    margin: 4vw auto 2vw;
+    position: relative;
+}
 
-    font-size: 2.5vw;
-
-    margin-top: 4vw;
-    margin-bottom: 2vw;
+/* Accent line underneath section titles */
+.experience-section-title::after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 2px;
+    background-color: #4F89F7;
+    border-radius: 10px;
+    margin: 1px auto 0;
 }
 
 /* Mobile layout */
