@@ -80,10 +80,11 @@
     max-width: 800px;
     max-height: 80vh;
     overflow-y: auto;
-    margin: 5vh auto;
+    margin: 25vh auto;
     border-radius: 10px;
     padding: 30px;
     position: relative;
+    font-family: "Google Sans Code", monospace;
 }
 
 /* Hidden modal information */
@@ -112,13 +113,10 @@
     transform: scale(1.15);
 }
 
-.modal-content h2 {
-    color: #4F89F7;
-}
-
 /* Modal text spacing */
 .modal-content h3 {
     margin-bottom: 5px;
+    color: #4F89F7;
 }
 
 .modal-content p {
