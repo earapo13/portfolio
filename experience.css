@@ -77,14 +77,32 @@
 .modal-content { 
     background: white;
     width: 60%;
-    max-width: 800px;
-    max-height: 80vh;
+    max-width: 700px;
+    max-height: 75vh;
     overflow-y: auto;
-    margin: 25vh auto;
+    margin: 20vh auto 5vh;
     border-radius: 10px;
     padding: 30px;
     position: relative;
     font-family: "Google Sans Code", monospace;
+    box-sizing: border-box;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #cfcfcf;
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #999999;
 }
 
 /* Hidden modal information */
@@ -121,6 +139,7 @@
 
 .modal-content p {
     margin-top: 0;
+    font-style: italic;
 }
 
 /* Close button */
