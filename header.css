@@ -39,6 +39,8 @@ header {
     top: 0;
     background-color: #ffffff;
     border: 1px solid #EDEDED;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,.05);
 }
 
 /*style of my name*/

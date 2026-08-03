@@ -1,61 +1,158 @@
-/*styling for all items*/
-.resume {
-    margin: 5vw;
+/* Experience grid */
+.resume { 
+    margin: 5vw 10vw;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /*displays expereinces in a grid with 2 columns*/
+    grid-template-columns: repeat(4, 1fr); /*displays expereinces in a grid with 3 columns*/
     gap: 40px;
     color: #000000;
 }
 
-/*type of experience*/
-h2 {
-    text-align: center;
-}
-
-/*expereince title*/
-h3 {
-    text-align: center;
-    color: #4F89F7;
-}
-
-/*company name + dates*/
-h4 {
-    text-align: left;
-}
-
-/*logo + comapny name + dates*/
-.company {
+/* Experience cards */
+.job { 
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    border-radius: 10px;
+    border: .5px solid #EDEDED;
+    box-shadow: 5px 5px 10px #ededed;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform .2s ease, filter .2s ease;
+} 
+
+.job:hover { 
+    transform: scale(1.05);
+    background-color: #f8f8f8;
 }
 
-/*logos*/
-img {
+.job:hover .card-info > *:not(img) {
+    filter: brightness(.9);
+}
+
+/* Card content */
+.card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card-info h3 {
+    color: #4F89F7;
+    height: 48px;
+    margin: 10px 0;
+}
+
+.card-info h4 {
+    height: 40px;
+    margin: 10px 0;
+}
+
+.card-info p {
+    height: 40px;
+    margin: 10px 0;
+}
+
+/* Card image */
+.card-info img {
     width: 90px;
     height: 90px;
     border-radius: 100%;
 }
 
-.website-link {
-    color: #000000;
+/* Modal background */
+.modal { 
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 1000;
 }
 
-.website-link:hover {
-    color: rgb(117, 117, 117); /*links are grey when hovered over*/
-}
-
-/*each indivdual experience*/
-.job {
+/* Modal box */
+.modal-content { 
+    background: white;
+    width: 60%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    margin: 5vh auto;
     border-radius: 10px;
-    border: .5px solid #EDEDED;
-    box-shadow: 5px 5px 10px 0px #ededed;
-    padding: 2%;
+    padding: 30px;
+    position: relative;
 }
 
+/* Hidden modal information */
+.modal-info {
+    display: none;
+}
+
+/* Modal header */
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Modal logo */
+.modal-logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: transform .2s ease;
+}
+
+.modal-logo:hover {
+    transform: scale(1.15);
+}
+
+.modal-content h2 {
+    color: #4F89F7;
+}
+
+/* Modal text spacing */
+.modal-content h3 {
+    margin-bottom: 5px;
+}
+
+.modal-content p {
+    margin-top: 0;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 32px;
+    cursor: pointer;
+    color: gray;
+} 
+
+.close:hover { 
+    color: black;
+}
+
+.experience-section-title {
+    text-align: center;
+    color: #000000;
+
+    font-size: 2.5vw;
+
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+}
+
+/* Mobile layout */
 /*when screen is small, display jobs as one single column*/
-@media screen and (max-width: 1000px){
-  .resume {
-    grid-template-columns: 1fr;
-  }
+@media screen and (max-width: 1000px){ 
+    .resume {
+        grid-template-columns: 1fr;
+    } 
 }
